@@ -363,7 +363,7 @@
         </button>
         <td>
           Patch 
-          <strong>1.67b</strong>has been released. More information <a href="#"><strong>here.</strong>
+          <strong>1.67b</strong> has been released. More information <a href="#"><strong>here.</strong>
           </a>
         </td>
       </div>
@@ -381,6 +381,7 @@
     <div id="spaceholder">
       &nbsp;
     </div>
+
     
     <footer>
       <div class="container">

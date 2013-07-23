@@ -20,28 +20,24 @@
     </a>
 </td>
 </div>
-{{ Form::open(array('url' =>
-'register')) }}
+{{ Form::open(array('url' => 'register')) }}
 
 
-@if ($errors->
-has('name'))
+@if ($errors-> has('name'))
 <div class="alert alert-danger">
   {{ $errors->
   first('name', ':message') }}
 </div>
 @endif
 
-@if ($errors->
-has('email'))
+@if ($errors-> has('email'))
 <div class="alert alert-danger">
   {{ $errors->
   first('email', ':message') }}
 </div>
 @endif
 
-@if ($errors->
-has('password'))
+@if ($errors-> has('password'))
 <div class="alert alert-danger">
   {{ $errors->
   first('password', ':message') }}
@@ -52,8 +48,7 @@ has('password'))
 <div class="control-group">
   {{ Form::label('name', 'Account name') }}
   <div class="controls">
-    {{ Form::text('name', null, array('placeholder' =>
-    'Enter your account name')) }}
+    {{ Form::text('name', null, array('placeholder' => 'Enter your account name')) }}
   </div>
 </div>
 
@@ -61,8 +56,7 @@ has('password'))
 <div class="control-group">
   {{ Form::label('email', 'E-mail') }}
   <div class="controls">
-    {{ Form::text('email', null, array('placeholder' =>
-    'Enter your e-mail')) }}
+    {{ Form::text('email', null, array('placeholder' => 'Enter your e-mail')) }}
   </div>
 </div>
 
@@ -78,10 +72,8 @@ has('password'))
   Already have an account?
 </a>
 <div class="form-actions">
-  {{ Form::submit('Register', array('class' =>
-  'btn btn-success')) }}
-  {{ Form::button('Help', array('class' =>
-  'btn btn-default')) }}
+  {{ Form::submit('Register', array('class' => 'btn btn-success')) }}
+  {{ Form::button('Help', array('class' => 'btn btn-default')) }}
 </div>
 
 {{ Form::close() }}

@@ -3,6 +3,11 @@
 class AuthController extends BaseController {
 
 
+    /**
+     * The layout that should be used for responses.
+     */
+    protected $layout = 'base';
+
 
 
 	// get_login
@@ -120,5 +125,36 @@ class AuthController extends BaseController {
         Auth::logout();
         return Redirect::to('/')->with('success', 'You have successfully logged out!');
 
+    }
+
+
+
+    // create_character
+
+    public function post_character()
+    {
+        $input = Input::all();
+
+        $rules = array(
+          'character_name' => 'required|unique:players,name|min:4',
+          'sex' => 'required'
+          );
+
+        $validation = Validator::make($input, $rules);
+
+        if ($validation->fails()) {
+
+          return Redirect::to('create_character')->withErrors($validation);
+          
+        } else {
+
+             $player = new Player();
+             $player->account_id = Auth::user()->id;
+             $player->name = $input['character_name'];
+             $player->sex = $input['sex'];
+             $player->save();
+
+          return Redirect::to('managment')->with('success', 'Your character has been created.');
+        }
     }
 }
