@@ -17,7 +17,7 @@
             <i class="icon-calendar">
             </i>
             Sat, 20 Jul 2013 16:29 &nbsp;&nbsp;&nbsp;&nbsp;
-            <img class="author-avatar" height="18" src="http://3.imgland.net/UpZCy6.png" width="18" />
+            <img class="author-avatar" height="18" src="http://3.imgland.net/SkhoCQ.png" width="18" />
             
             <a href="/profile/Zysen">
               zysen
@@ -72,7 +72,7 @@
           <i class="icon-calendar">
           </i>
           Sun, 14 Jul 2013 03:20 &nbsp;&nbsp;&nbsp;&nbsp;
-          <img class="author-avatar" height="18" src="http://3.imgland.net/UpZCy6.png" width="18" />
+          <img class="author-avatar" height="18" src="http://3.imgland.net/SkhoCQ.png" width="18" />
           
           <a href="/profile/Zysen">
             zysen

@@ -25,6 +25,12 @@
  </div>
 </div>
 
+   <div class="control-group">
+      <div class="controls">
+{{ Form::select('vocation', array('1' => 'Sorcerer', '2' => 'Druid', '3' => 'Paladin', '4' => 'Knight'), '1'); }}
+ </div>
+</div>
+
 <div class="form-actions">
   {{ Form::submit('Create a character', array('class' => 'btn btn-success')) }}
   {{ Form::button('Help', array('class' => 'btn btn-default')) }}

@@ -9,7 +9,8 @@ class SubController extends BaseController {
 
     public function get_managment()
     {
-    	return View::make('aac.managment');
+       $account = Auth::user();
+       return View::make('aac.managment')->with('account',$account);
     }
 
     public function get_character()
@@ -17,4 +18,10 @@ class SubController extends BaseController {
     	return View::make('aac.create_character');
     }
 
+
+    public function players()
+    {
+       $account = Auth::user();
+       return View::make('aac.test')->with('account',$account);
+    }
 }

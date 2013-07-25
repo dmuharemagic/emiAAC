@@ -24,8 +24,43 @@
 	</tr>
 </thead>
 
-<tbody>
-</tbody>
+<tbody> 
+	<?php $count = 0;?> 
+<?php foreach($account->players as $player):?> 
+	<?php $count++;?>
+<tr> 
+<td><?php echo $count;?></td> 
+<td><?php echo $player->name;?></td> 
+<td><?php echo $player->level?></td> 
+<td><?php if($player->vocation == 1){ 
+echo "Sorcerer"; 
+}else if($player->vocation == 2){
+echo 'Druid';
+}else if($player->vocation == 3){
+echo 'Paladin';
+}else if($player->vocation == 4){
+echo 'Knight';
+}else if($player->vocation == 5){
+echo 'Master Sorcerer';
+}else if($player->vocation == 6){
+echo 'Elder Druid';
+}else if($player->vocation == 7){
+echo 'Royal Paladin';
+}else{
+echo 'Elite Knight';
+}?></td>
+<td><?php echo $player->created_at?></td>
+<td><?php if($player->group_id == 1){ 
+echo "Player"; 
+}else if($player->group_id == 2){
+echo 'Gamemaster';
+}else if($player->group_id == 3){
+echo 'God';
+}?></td>
+<td><span class="<?php echo($player->online == 1) ? 'label label-success' : 'label label-important' ;?>"> <?php echo($player->online ==1) ? 'Online' : 'Offline' ;?></span></td>
+</tr> 
+<?php endforeach;?> 
+</tbody> 
 </table>
 
 </div>

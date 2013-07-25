@@ -24,7 +24,6 @@ Route::group(array('before' => 'auth'), function()
 
 });
 
-
 // AdminController
 
 Route::get('admin/dashboard', 'AdminController@dashboard');

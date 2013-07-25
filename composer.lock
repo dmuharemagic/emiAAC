@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e08d3d39d170303927b2ca3db57c9990",
+    "hash": "3cd02c728baf72a9bd429310df18991f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -198,12 +198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "3db3ab843ff76774bee4679d4cb3a10cffb0a935"
+                "reference": "623caf42551b416460df786154d89bc50e3d1798"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/3db3ab843ff76774bee4679d4cb3a10cffb0a935",
-                "reference": "3db3ab843ff76774bee4679d4cb3a10cffb0a935",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/623caf42551b416460df786154d89bc50e3d1798",
+                "reference": "623caf42551b416460df786154d89bc50e3d1798",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2013-05-26 05:21:22"
+            "time": "2013-07-23 08:27:26"
         },
         {
             "name": "doctrine/common",
@@ -727,6 +727,47 @@
                 "laravel"
             ],
             "time": "2013-07-12 16:30:50"
+        },
+        {
+            "name": "loic-sharma/profiler",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loic-sharma/profiler.git",
+                "reference": "v1.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loic-sharma/profiler/zipball/v1.1.2",
+                "reference": "v1.1.2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "1.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Profiler": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loic Sharma"
+                }
+            ],
+            "description": "A PHP 5.3 profiler based off of Laravel 3's Anbu.",
+            "keywords": [
+                "anbu",
+                "laravel",
+                "profiler"
+            ],
+            "time": "2013-06-17 17:00:15"
         },
         {
             "name": "monolog/monolog",
@@ -1800,12 +1841,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
-                "reference": "19a93776b050f2ba611986db07d6f5f981e5ebc4"
+                "reference": "733d1f13983ce56180fa1fc8fbfbb0affd7e2bb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/19a93776b050f2ba611986db07d6f5f981e5ebc4",
-                "reference": "19a93776b050f2ba611986db07d6f5f981e5ebc4",
+                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/733d1f13983ce56180fa1fc8fbfbb0affd7e2bb3",
+                "reference": "733d1f13983ce56180fa1fc8fbfbb0affd7e2bb3",
                 "shasum": ""
             },
             "require": {
@@ -1842,7 +1883,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2013-07-19 17:55:41"
+            "time": "2013-07-22 15:25:47"
         },
         {
             "name": "way/laravel-test-helpers",

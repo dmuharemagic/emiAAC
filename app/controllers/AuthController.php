@@ -46,6 +46,8 @@ class AuthController extends BaseController {
         );
 
 
+
+           // Validate
         $validator = Validator::make($userdata, $rules);
         if ($validator->passes())
         {
@@ -137,7 +139,8 @@ class AuthController extends BaseController {
 
         $rules = array(
           'character_name' => 'required|unique:players,name|min:4',
-          'sex' => 'required'
+          'sex' => 'required',
+          'vocation' => 'required'
           );
 
         $validation = Validator::make($input, $rules);
@@ -152,6 +155,7 @@ class AuthController extends BaseController {
              $player->account_id = Auth::user()->id;
              $player->name = $input['character_name'];
              $player->sex = $input['sex'];
+             $player->vocation = $input['vocation'];
              $player->save();
 
           return Redirect::to('managment')->with('success', 'Your character has been created.');

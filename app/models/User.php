@@ -19,7 +19,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	*  Timestamps: true if needed, otherwise false.
 	*
 	*/
-	public $timestamps = false;
+	public $timestamps = true;
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -59,7 +59,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 	 public function players() {
-        return $this->hasMany('Player');
+        return $this->hasMany('Player','account_id');
     }
 
 }
