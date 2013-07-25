@@ -1,4 +1,5 @@
 @extends('base')
+@section('title', 'Create character')
 @section('main')
 
 @if ($errors-> has('character_name'))

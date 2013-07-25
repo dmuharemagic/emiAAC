@@ -1,4 +1,5 @@
 @extends('base')
+@section('title', Who is online?')
 @section('main')
 
 <div class="doc-content-box">
@@ -13,7 +14,6 @@
         <th>Role</th>
         </tr>
   </thead>
-
 <tbody>
   @if(!empty($results))
     <?php $count = 0;?>

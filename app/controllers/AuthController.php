@@ -3,9 +3,10 @@
 class AuthController extends BaseController {
 
 
-    /**
-     * The layout that should be used for responses.
-     */
+   //This code sucks, you know it and I know it.  
+  //Move on and call me an idiot later.
+  
+
     protected $layout = 'base';
 
 

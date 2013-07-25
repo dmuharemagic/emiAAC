@@ -1,4 +1,5 @@
 @extends('base')
+@section('title', 'Account Managment')
 @section('main')
 
 <div class="doc-content-box">

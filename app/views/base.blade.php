@@ -17,9 +17,7 @@
                   <head>
                     
                     <meta charset="utf-8">
-                    <title>
-                      emiAAC, Automatic Account Creator (built with Laravel 4 and Bootstrap)"
-                    </title>
+                    <title>emiAAC - @yield('title')</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <meta name="description" content="Automatic Account Creator (built with Laravel 4 and Bootstrap)">
                     <meta name="author" content="Zysen">
