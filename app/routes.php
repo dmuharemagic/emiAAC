@@ -31,6 +31,7 @@ Route::get('admin/dashboard', 'AdminController@dashboard');
 // SubController
 
 Route::get('online', 'SubController@get_online');
+Route::get('highscores', 'SubController@highscores');
 
 
 

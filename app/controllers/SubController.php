@@ -18,4 +18,10 @@ class SubController extends BaseController {
     {
     	return View::make('aac.create_character');
     }
+
+    public function highscores()
+    {
+        $players = Player::orderBy('experience','desc')->get();
+        return View::make('aac.highscores')->with('players', $players);
+    }
 }

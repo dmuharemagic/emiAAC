@@ -14,6 +14,9 @@
   <!--
 <![endif]-->
                   
+<!--//This code sucks, you know it and I know it.  
+   //Move on and call me an idiot later. -->
+  
                   <head>
                     
                     <meta charset="utf-8">
@@ -54,7 +57,7 @@
                       padding: 20px;
                       background: #F9F9F9;
                       border: 1px solid #DDDDDD;
-                      border-radius: 4px;
+                      border-radius: 1px;
                     }
                       .doc-content-box > ul > li{
                       list-style-type: none;
