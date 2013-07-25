@@ -51,7 +51,7 @@
                       
                       .doc-content-box{
                       position:relative;
-                      min-height: 130px;
+                      min-height: 1px;
                       margin-bottom: 20px;
                       padding: 20px;
                       background: #F9F9F9;

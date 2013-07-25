@@ -13,19 +13,21 @@
 	{{ Form::open(array('url' => 'create_character')) }}
 
         <div class="control-group">
-  {{ Form::label('character_name', 'Character name') }}
+  {{ Form::label('character_name', 'Character name:') }}
   <div class="controls">
     {{ Form::text('character_name', null, array('placeholder' => 'Character name goes here..')) }}
   </div>
 </div>
 
    <div class="control-group">
+    {{ Form::label('sex', 'Character sex:') }}
    	  <div class="controls">
 {{ Form::select('sex', array('1' => 'Male', '2' => 'Female'), '1'); }}
  </div>
 </div>
 
    <div class="control-group">
+    {{ Form::label('vocation', 'Vocation:') }}
       <div class="controls">
 {{ Form::select('vocation', array('1' => 'Sorcerer', '2' => 'Druid', '3' => 'Paladin', '4' => 'Knight'), '1'); }}
  </div>

@@ -26,12 +26,12 @@
 
 <tbody> 
 	<?php $count = 0;?> 
-<?php foreach($account->players as $player):?> 
+@foreach($account->players as $player)
 	<?php $count++;?>
 <tr> 
-<td><?php echo $count;?></td> 
-<td><?php echo $player->name;?></td> 
-<td><?php echo $player->level?></td> 
+<td>{{ $count }}. </td> 
+<td>{{ $player->name }}</td> 
+<td>{{ $player->level }}</td> 
 <td><?php if($player->vocation == 1){ 
 echo "Sorcerer"; 
 }else if($player->vocation == 2){
@@ -49,7 +49,7 @@ echo 'Royal Paladin';
 }else{
 echo 'Elite Knight';
 }?></td>
-<td><?php echo $player->created_at?></td>
+<td>{{ $player->created_at }}</td>
 <td><?php if($player->group_id == 1){ 
 echo "Player"; 
 }else if($player->group_id == 2){
@@ -59,7 +59,7 @@ echo 'God';
 }?></td>
 <td><span class="<?php echo($player->online == 1) ? 'label label-success' : 'label label-important' ;?>"> <?php echo($player->online ==1) ? 'Online' : 'Offline' ;?></span></td>
 </tr> 
-<?php endforeach;?> 
+@endforeach
 </tbody> 
 </table>
 

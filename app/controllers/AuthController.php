@@ -156,6 +156,11 @@ class AuthController extends BaseController {
              $player->name = $input['character_name'];
              $player->sex = $input['sex'];
              $player->vocation = $input['vocation'];
+             // this is located mostly in the config.lua
+             $player->town_id = '1';  // ID of the town
+             $player->posx = '95';  // posx (X)
+             $player->posy = '117';   // posy(Y)
+             $player->posz = '7';  // posz(Z)
              $player->save();
 
           return Redirect::to('managment')->with('success', 'Your character has been created.');
