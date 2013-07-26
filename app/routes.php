@@ -11,22 +11,18 @@ Route::get('register', 'AuthController@get_register');
 Route::post('register', 'AuthController@post_register');
 Route::get('login', 'AuthController@get_login');
 Route::post('login', 'AuthController@post_login');
-Route::get('logout', 'AuthController@get_logout');
+Route::get('account/logout', 'AuthController@get_logout');
 
 
 
 Route::group(array('before' => 'auth'), function()
 {
 
-   Route::get('managment', 'SubController@get_managment');
-   Route::get('create_character', 'SubController@get_character');
-   Route::post('create_character', 'AuthController@post_character');
+   Route::get('account/managment', 'SubController@get_managment');
+   Route::get('account/create_character', 'SubController@get_character');
+   Route::post('account/create_character', 'AuthController@post_character');
 
 });
-
-// AdminController
-
-Route::get('admin/dashboard', 'AdminController@dashboard');
 
 // SubController
 

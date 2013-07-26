@@ -26,11 +26,10 @@
                     <meta name="author" content="Zysen">
                     
                     
-                    
-                    <link href="css/bootstrap.min.css" rel="stylesheet">
-                    <link href="css/screen.css" rel="stylesheet">
-                    <link href="css/prettify.css" rel="stylesheet">
-                    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+                    {{ HTML::style('css/bootstrap.min.css') }}
+                    {{ HTML::style('css/screen.css') }}
+                    {{ HTML::style('css/prettify.css') }}
+                    {{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css') }}
                     
                     
                     <style type="text/css">
@@ -122,48 +121,48 @@
                               </a>
                               <ul class="dropdown-menu">
                                 <li class="disabled">
-                                  <a href="forum.php">
+                                  <a href="forum">
                                     Forum
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="casts.php">
+                                  <a href="casts">
                                     Live Casts
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="character.php">
+                                  <a href="character">
                                     Characters
                                   </a>
                                 </li>
                                 <li class="disabled">
-                                  <a href="highscores.php">
+                                  <a href="highscores">
                                     Highscores
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="support.php">
+                                  <a href="support">
                                     Support
                                   </a>
                                 </li>
                                 <li class="disabled">
-                                  <a href="houses.php">
+                                  <a href="houses">
                                     Houses
                                   </a>
                                 </li>
                                 <li class="disabled">
-                                  <a href="gallery.php">
+                                  <a href="gallery">
                                   </i>
                                   Gallery
                                 </a>
                             </li>
                             <li class="disabled">
-                              <a href="guilds.php">
+                              <a href="guilds">
                                 Guilds
                               </a>
                             </li>
                             <li class="disabled">
-                              <a href="guildwars.php">
+                              <a href="guildwars">
                                 Guild Wars
                               </a>
                             </li>
@@ -179,34 +178,34 @@
                           </a>
                           <ul class="dropdown-menu">
                             <li>
-                              <a href="rules.php">
+                              <a href="rules">
                                 Rules
                               </a>
                             </li>
                             <li>
-                              <a href="expstages.php">
+                              <a href="expstages">
                                 Exp. stages
                               </a>
                             </li>
                             <li class="disabled">
-                              <a href="monsters.php">
+                              <a href="monsters">
                                 Monsters
                               </a>
                             </li>
                             <li>
-                              <a href="quests.php">
+                              <a href="quests">
                                 Quests
                               </a>
                             </li>
                             <li class="disabled">
-                              <a href="spells.php">
+                              <a href="spells">
                                 Spells
                               </a>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <a href="shop.php">
+                          <a href="shop">
                             <i class="icon-gift icon-black">
                             </i>
                             Shop
@@ -263,7 +262,7 @@
                       <ul class="dropdown-menu">
                         <li>
                           
-                          <a href="managment">
+                          <a href="account/managment">
                             <i class="icon-user">
                             </i>
                             Account Managment  
@@ -272,7 +271,7 @@
                         </li>
                         <li>
                           
-                          <a href="change_password">
+                          <a href="account/change_password">
                             <i class="icon-lock">
                             </i>
                             Change Password
@@ -283,7 +282,7 @@
                         </li>
                         <li>
                           
-                          <a href="logout">
+                          <a href="account/logout">
                             <i class="icon-off">
                             </i>
                             Logout

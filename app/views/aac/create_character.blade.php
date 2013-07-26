@@ -11,7 +11,7 @@
 
 <div class="doc-content-box">
 	<legend>Create a character</legend>
-	{{ Form::open(array('url' => 'create_character')) }}
+	{{ Form::open(array('url' => 'account/create_character')) }}
 
         <div class="control-group">
   {{ Form::label('character_name', 'Character name:') }}
