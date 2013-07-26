@@ -2,6 +2,7 @@
 
 
 Automatic Account Creator (built with Laravel 4 and Bootstrap)
+### NOTE - the profiler is turned on !
 
 ## Features
 
