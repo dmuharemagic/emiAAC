@@ -69,28 +69,17 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
 </script>
 <![endif]-->
-                  <script src="../../code.jquery.com/jquery-1.9.1.min.js">
-                  </script>
-                  <script src="js/bootstrap.min.js">
-                  </script>
-                  <script src="js/prettify.js">
-                  </script>
-                  <script src="js/scripts.js">
-                  </script>
-                  <link rel="shortcut icon" href="http://raveren.github.io/favicon.ico">
+
+
                   </head>
                   
                   <body data-spy="scroll" data-target="#scrollspy" data-offset="45">
                     <header class="main-header subhead" id="overview">
                       <div class="container">
-                        <h1>
-                          emiAAC
-                        </h1>
+                        <h1>emiAAC</h1>
                         
                         <p class="lead">
-                          <strong>
-                            Automatic Account Creator (built with Laravel 4 and Bootstrap)
-                          </strong>
+                          <strong>Automatic Account Creator (built with Laravel 4 and Bootstrap)</strong>
                         </p>
                       </div>
                       
@@ -262,7 +251,7 @@
                       <ul class="dropdown-menu">
                         <li>
                           
-                          <a href="account/managment">
+                          <a href="managment">
                             <i class="icon-user">
                             </i>
                             Account Managment  
@@ -271,7 +260,7 @@
                         </li>
                         <li>
                           
-                          <a href="account/change_password">
+                          <a href="change_password">
                             <i class="icon-lock">
                             </i>
                             Change Password
@@ -282,7 +271,7 @@
                         </li>
                         <li>
                           
-                          <a href="account/logout">
+                          <a href="logout">
                             <i class="icon-off">
                             </i>
                             Logout
@@ -434,36 +423,25 @@ echo "Page generated in $time seconds.\n";
                         &nbsp;
                       </div>
                       
-                      <!-- Le javascript==================================================- ->
-                         <!- Placed at the end of the document so the pages load faster -->
-                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-alert.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-modal.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-dropdown.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-scrollspy.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tab.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tooltip.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-popover.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-button.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-carousel.js">
-                      </script>
-                      <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-typeahead.js">
-                      </script>
+                        <!-- Le javascript -->
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-alert.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-modal.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tab.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-popover.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-button.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+
+
 </body>
 
 </html>

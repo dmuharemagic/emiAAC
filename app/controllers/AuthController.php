@@ -148,7 +148,7 @@ class AuthController extends BaseController {
 
         if ($validation->fails()) {
 
-          return Redirect::to('account/create_character')->withErrors($validation);
+          return Redirect::to('create_character')->withErrors($validation);
           
         } else {
 
@@ -164,7 +164,7 @@ class AuthController extends BaseController {
              $player->posz = '7';  // posz(Z)
              $player->save();
 
-          return Redirect::to('account/managment')->with('success', 'Your character has been created.');
+          return Redirect::to('managment')->with('success', 'Your character has been created.');
         }
     }
 }
