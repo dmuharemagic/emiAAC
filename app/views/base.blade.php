@@ -32,7 +32,7 @@
                     {{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css') }}
                     
                     
-                    <style type="text/css">
+                    <style type="text/css"> 
                       <!--
                       
                       .footer-post {
