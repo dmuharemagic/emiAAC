@@ -1,5 +1,5 @@
 @extends('base')
-@section('title', Who is online?')
+@section('title', 'Who is online?')
 @endsection
 @section('main')
 
