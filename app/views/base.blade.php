@@ -124,7 +124,7 @@
                                     Characters
                                   </a>
                                 </li>
-                                <li class="disabled">
+                                <li>
                                   <a href="highscores">
                                     Highscores
                                   </a>
@@ -292,30 +292,17 @@
 <div class="container">
   <div class="row">
 
-    <div id="spaceholder">
-      &nbsp;
-    </div>
-    <div id="spaceholder">
-      &nbsp;
-    </div>
-    <div id="spaceholder">
-      &nbsp;
-    </div>
+    <div id="spaceholder">&nbsp;</div>
+    <div id="spaceholder">&nbsp;</div>
+    <div id="spaceholder">&nbsp;</div>
     
     <div class="page-header">      
       
       @if ($message = Session::get('success'))
 
       <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">
-          &times;
-        </button>
-        <strong>
-          Success!
-        </strong>
-        <div id="spaceholder">
-          &nbsp;
-        </div>
+        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong>
+        <div id="spaceholder">&nbsp;</div>
         {{{ $message }}}
       </div>
 
@@ -324,80 +311,35 @@
       @if ($message = Session::get('succ'))
 
       <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">
-          &times;
-        </button>
-        <strong>
-          Proceed
-        </strong>
-        <div id="spaceholder">
-          &nbsp;
-        </div>
+        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Proceed </strong>
+        <div id="spaceholder">&nbsp;</div>
         {{{ $message }}}
       </div>
 
       @endif              
       
-      <div class="alert alert-info">
-        <span class="label label-info">
-          12 Jul 2013 03:59
-        </span>
+      <div class="alert alert-info"><span class="label label-info">12 Jul 2013 03:59</span>
+        <span class="label label-success">Update</span>
         
-        <span class="label label-success">
-          Update
-        </span>
-        
-        <button type="button" class="close" data-dismiss="alert">
-          &times;
-        </button>
-        <td>
-          Patch 
-          <strong>1.67b</strong> has been released. More information <a href="#"><strong>here.</strong>
-          </a>
-        </td>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <td>Patch <strong>1.67b</strong> has been released. More information <a href="#"><strong>here.</strong></a></td>
       </div>
       
     </div>
     
     @yield('main')
     
-    <div id="spaceholder">
-      &nbsp;
-    </div>
-    <div id="spaceholder">
-      &nbsp;
-    </div>
-    <div id="spaceholder">
-      &nbsp;
-    </div>
+    <div id="spaceholder">&nbsp;</div>
+    <div id="spaceholder">&nbsp;</div>
+    <div id="spaceholder">&nbsp;</div>
 
     
     <footer>
       <div class="container">
         <div class="footer-post">
-          <p>
-            Designed and built by 
-            <a href='http://otland.net/members/zysen/'>
-              <strong>
-                Zysen
-              </a>
-            </strong>
-            | Built with 
-            <a href="http://laravel.com" target="_blank" title="Laravel 4 - PHP Framework">
-              Laravel 4
-              <alt="Laravel 4 - PHP Framework">
-              </a>
-              .
-            </p>
-            <p>
-              <div class="center-1">
-                <a href="#">
-                  Back to top &uarr;
-                </a>
-          </div>
-        </p>
-        <p>
-          <small><?php
+          <p>Designed and built by <a href='http://otland.net/members/zysen/'><strong>Zysen</a></strong> | Built with <a href="http://laravel.com" target="_blank" title="Laravel 4 - PHP Framework">Laravel 4<alt="Laravel 4 - PHP Framework"></a></p>
+            <p><div class="center-1"><a href="#">Back to top &uarr;</a></div></p>
+        <p><small><?php
 $time_start = microtime(true);
 
 // Sleep for a while
@@ -413,33 +355,28 @@ echo "Page generated in $time seconds.\n";
                               
                           </footer>
                       </div>
-                      <div id="spaceholder">
-                        &nbsp;
-                      </div>
-                      <div id="spaceholder">
-                        &nbsp;
-                      </div>
-                      <div id="spaceholder">
-                        &nbsp;
-                      </div>
+                      <div id="spaceholder">&nbsp;</div>
+                      <div id="spaceholder">&nbsp;</div>
+                      <div id="spaceholder">&nbsp;</div>
                       
                         <!-- Le javascript -->
     <!-- ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-alert.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-modal.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-dropdown.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tab.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tooltip.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-popover.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-button.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-carousel.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+
+    {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js') }}
+    {{ HTML::script('http://twitter.github.io/bootstrap/assets/js/jquery.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-transition.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-alert.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-modal.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-dropdown.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-scrollspy.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-tab.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-tooltip.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-popover.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-button.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-collapse.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-carousel.js') }}
+    {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-typeahead.js') }}
 
 
 </body>
