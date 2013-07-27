@@ -92,7 +92,8 @@ class AuthController extends BaseController {
             $rules = array(
                 'name' => 'required|unique:accounts,name|min:4',
                 'email' => 'required|unique:accounts,email|email',
-                'password' => 'required|min:4'
+                'password' => 'required|min:4',
+                'password_confirm' => 'same:password'
             	);
 
       $validation = Validator::make($input, $rules);

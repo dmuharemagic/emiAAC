@@ -1,5 +1,6 @@
 @extends('base')
 @section('title', 'Home')
+@endsection
 @section('main')
 
 

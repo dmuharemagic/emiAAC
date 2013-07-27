@@ -1,5 +1,6 @@
 @extends('base')
 @section('title', 'Highscores')
+@endsection
 @section('main')
 <!-- This is not done yet. -->
 <div class="doc-content-box">

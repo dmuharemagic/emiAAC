@@ -1,5 +1,6 @@
 @extends('base')
 @section('title', Who is online?')
+@endsection
 @section('main')
 
 <div class="doc-content-box">

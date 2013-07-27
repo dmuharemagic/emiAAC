@@ -1,5 +1,6 @@
 @extends('base')
 @section('title', 'Register')
+@endsection
 @section('main')
 
 <div class="separator">
@@ -45,6 +46,13 @@
 </div>
 @endif
 
+@if ($errors-> has('password_confirm'))
+<div class="alert alert-danger">
+  {{ $errors->
+  first('password_confirm', ':message') }}
+</div>
+@endif
+
 
 <div class="control-group">
   {{ Form::label('name', 'Account name') }}
@@ -65,6 +73,13 @@
   {{ Form::label('password', 'Password') }}
   <div class="controls">
     {{ Form::password('password') }}
+  </div>
+</div>
+
+<div class="control-group">
+  {{ Form::label('password_confirm', 'Password (confirm)') }}
+  <div class="controls">
+    {{ Form::password('password_confirm') }}
   </div>
 </div>
 

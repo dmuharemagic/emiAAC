@@ -1,5 +1,6 @@
 @extends('base')
 @section('title', 'Log in')
+@endsection
 @section('main')
 
 
