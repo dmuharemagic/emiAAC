@@ -10,21 +10,21 @@
 	
         <li class="active"><a href="#">Level</a></li>
 
-        <li><a href="#">Magic Level</a></li>
+        <li><a href="/skill=2">Magic Level</a></li>
 
-        <li><a href="#">Sword Fighting</a></li>
+        <li><a href="/skill=3">Sword Fighting</a></li>
 
-        <li><a href="#">Club Fighting</a></li>
+        <li><a href="/skill=4">Club Fighting</a></li>
 
-        <li><a href="#">Axe Fighting</a></li>
+        <li><a href="/skill=5">Axe Fighting</a></li>
 
-        <li><a href="#">Distance Fighting</a></li>
+        <li><a href="/skill=6">Distance Fighting</a></li>
 
-        <li><a href="#">Fist Fighting</a></li>
+        <li><a href="/skill=7">Fist Fighting</a></li>
 
-        <li><a href="#">Fishing</a></li>
+        <li><a href="/skill=8">Fishing</a></li>
 
-        <li><a href="#">Shielding</a></li>
+        <li><a href="/skill-9">Shielding</a></li>
 
 </ul>
 </div>

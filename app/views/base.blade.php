@@ -364,7 +364,7 @@ echo "Page generated in $time seconds.\n";
     <!-- Placed at the end of the document so the pages load faster -->
 
     {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js') }}
-    {{ HTML::script('http://twitter.github.io/bootstrap/assets/js/jquery.js') }}
+    {{ HTML::script('http://twbs.github.io/bootstrap/2.3.2/assets/js/jquery.js') }}
     {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-transition.js') }}
     {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-alert.js') }}
     {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-modal.js') }}
