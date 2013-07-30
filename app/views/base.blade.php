@@ -66,6 +66,9 @@
                     {
                       background-color:#fff
                     }
+
+                    .dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-submenu:hover>a,.dropdown-submenu:focus>a{text-decoration:none;color:#ffffff;background-color:#0081c2;background-image:-moz-linear-gradient(top, #0088cc, #0077b3);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));background-image:-webkit-linear-gradient(top, #0088cc, #0077b3);background-image:-o-linear-gradient(top, #0088cc, #0077b3);background-image:linear-gradient(to bottom, #0088cc, #0077b3);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);}
+
                       
                     </style>
                     
@@ -279,7 +282,7 @@
                           <a href="logout">
                             <i class="icon-off">
                             </i>
-                            Logout
+                            Log out
                           </a>
                           
                         </li>
@@ -316,12 +319,12 @@
       @if ($message = Session::get('succ'))
 
       <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Proceed </strong>
+        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Proceed.</strong>
         <div id="spaceholder">&nbsp;</div>
         {{{ $message }}}
       </div>
 
-      @endif              
+      @endif          
       
       <div class="alert alert-info"><span class="label label-info">12 Jul 2013 03:59</span>
         <span class="label label-success">Update</span>
@@ -368,7 +371,7 @@ echo "Page generated in $time seconds.\n";
     <!-- ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js') }}
+    {{ HTML::script('http://code.jquery.com/jquery-2.0.3.min.js') }}
     {{ HTML::script('http://twbs.github.io/bootstrap/2.3.2/assets/js/jquery.js') }}
     {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-transition.js') }}
     {{ HTML::script('https://raw.github.com/twbs/bootstrap/master/js/bootstrap-alert.js') }}

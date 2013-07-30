@@ -168,4 +168,15 @@ class AuthController extends BaseController {
           return Redirect::to('managment')->with('success', 'Your character has been created.');
         }
     }
+
+    // delete_character
+
+    public function delete_character($playerId)
+    {
+
+       $player = Player::findOrFail($playerId);
+       $player->delete();
+
+       return Redirect::back()->with('success', 'Your character has been deleted.');
+    }
 }

@@ -7,7 +7,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix {
+ .clearfix {
     *zoom:1
 }
 .clearfix:before, .clearfix:after {
@@ -1107,7 +1107,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     padding:19px 20px 20px;
     margin-top:20px;
     margin-bottom:20px;
-    background-color:#f5f5f5;
+    background-color:#f3f3f3;
     border-top:1px solid #e5e5e5;
     *zoom:1
 }

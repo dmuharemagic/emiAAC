@@ -8,7 +8,7 @@
 <legend>Account Managment</legend>
 
 <a href="create_character" class="btn btn-success"><i class="icon-plus icon-white"></i> Create a new character</a>&nbsp;
-<a href="#" class="btn btn-danger"><i class="icon-cogs icon-white"></i> Change your credentials</a>
+<a href="#" class="btn btn-info"><i class="icon-cogs icon-white"></i> Change your credentials</a>
 
 <div id="spaceholder">&nbsp;</div>
 
@@ -60,6 +60,7 @@ echo 'Gamemaster';
 echo 'God';
 }?></td>
 <td><span class="<?php echo($player->online == 1) ? 'label label-success' : 'label label-important' ;?>"> <?php echo($player->online ==1) ? 'Online' : 'Offline' ;?></span></td>
+<td><a class="btn btn-mini btn-danger" href="{{ URL::action('AuthController@delete_character', ['id' => $player->id]) }}"><i class="icon-trash icon-white"></i> Delete</a></td>
 </tr> 
 @endforeach
 </tbody> 
