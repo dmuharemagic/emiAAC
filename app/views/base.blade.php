@@ -61,6 +61,11 @@
                       .doc-content-box > ul > li{
                       list-style-type: none;
                     }
+
+                    .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th 
+                    {
+                      background-color:#fff
+                    }
                       
                     </style>
                     
