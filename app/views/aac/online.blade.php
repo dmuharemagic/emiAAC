@@ -16,57 +16,55 @@
         </tr>
   </thead>
 <tbody>
-  @if(!empty($results))
-    <?php $count = 0;?>
-    @foreach($results as $result) 
+
+    @if($results->count() > 0)
+        <?php $count = 0;?>
+        @foreach($results as $result) 
       <?php $count++;?>
       <tr>
-        
+
         <td>{{ $count }}. </td>
 
         <td>{{ $result->name }}</td>
 
         <td>{{ $result->level }}</td>
 
-        <td><?php if($result->vocation == 1){ 
-echo "Sorcerer"; 
-}else if($result->vocation == 2){
-echo 'Druid';
-}else if($result->vocation == 3){
-echo 'Paladin';
-}else if($result->vocation == 4){
-echo 'Knight';
-}else if($result->vocation == 5){
-echo 'Master Sorcerer';
-}else if($result->vocation == 6){
-echo 'Elder Druid';
-}else if($result->vocation == 7){
-echo 'Royal Paladin';
-}else{
-echo 'Elite Knight';
-}?></td>
+        <td><?php 
+        $vocations = array(
+
+        1 => "Sorcerer",
+        2 => "Druid",
+        3 => "Paladin",
+        4 => "Knight",
+        5 => "Master Sorcerer",
+        6 => "Elder Druid",
+        7 => "Royal Paladin",
+        8 => "Elite Knight"
+        
+        );
+
+    echo $vocations[$result->vocation];?></td>
         
         <td>{{ $result->created_at }}</td>
         
-        <td><?php if($result->group_id == 1){ 
-echo "Player"; 
-}else if($result->group_id == 2){
-echo 'Gamemaster';
-}else if($result->group_id == 3){
-echo 'God';
-}?></td>
+        <td><?php 
+        $groups = array(
+
+         1=> "Player",
+         2=>"Gamemaster",
+         3=>"God"
+
+         );
+
+         echo $groups[$result->group_id];?></td>
 
       </tr>
+      @endforeach 
+@else
 
-    @endforeach 
-  @else
+<td>{{ "There are no users online." }}</td>
 
-  <tr>
-
-    <td>{{"There are no users online."}}</td>
-
-  </tr>
-  @endif
+@endif
 </tbody>
 
   </table>
