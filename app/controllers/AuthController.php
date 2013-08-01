@@ -158,11 +158,26 @@ class AuthController extends BaseController {
              $player->name = $input['character_name'];
              $player->sex = $input['sex'];
              $player->vocation = $input['vocation'];
+             $player->town_id = $input['town'];
+
              // this is located mostly in the config.lua
-             $player->town_id = '1';  // ID of the town
-             $player->posx = '95';  // posx (X)
-             $player->posy = '117';   // posy(Y)
-             $player->posz = '7';  // posz(Z)
+
+             if(Input::has('town')) {
+
+              // town 1 - just a test, you can add whatever position you want
+                if(Input::get('town') == 1) {
+                   $player->posx = '95';
+                   $player->posy = '117';
+                   $player->posz = '7'; 
+                                            }
+
+              // town 2 - just a test, you can add whatever position you want
+                elseif(Input::get('town') == 2) {
+                   $player->posx = '1000';
+                   $player->posy = '1000';
+                   $player->posz = '7';
+                                                }
+}
              $player->save();
 
           return Redirect::to('managment')->with('success', 'Your character has been created.');

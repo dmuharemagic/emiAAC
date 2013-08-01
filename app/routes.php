@@ -33,9 +33,6 @@ Route::get('highscores', 'SubController@highscores');
 // CharactersController
 // not completed
 
-Route::get('characters', 'CharactersController@all');
-Route::get('characters/{name}', 'CharactersController@detail');
-Route::get('characters/search', 'CharactersController@search');
 
 
 
