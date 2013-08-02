@@ -90,9 +90,9 @@ class AuthController extends BaseController {
             $input = Input::all();
 
             $rules = array(
-                'name' => 'required|unique:accounts,name|min:4',
+                'name' => 'required|unique:accounts,name|min:4|AlphaNum',
                 'email' => 'required|unique:accounts,email|email',
-                'password' => 'required|min:4',
+                'password' => 'required|min:4|AlphaNum',
                 'password_confirm' => 'same:password'
             	);
 
@@ -140,7 +140,7 @@ class AuthController extends BaseController {
         $input = Input::all();
 
         $rules = array(
-          'character_name' => 'required|unique:players,name|min:4|max:255',
+          'character_name' => 'required|unique:players,name|min:4|max:255|alpha',
           'sex' => 'required',
           'vocation' => 'required'
           );
