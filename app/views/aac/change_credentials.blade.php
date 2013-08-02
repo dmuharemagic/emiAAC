@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Change credentials')
-@endsection
+@stop 
 @section('main')
 
 {{-- in progress --}}
@@ -9,4 +9,4 @@
 {{ 'this is so kewl' }}
 </div>
 
-@endsection
+@stop 

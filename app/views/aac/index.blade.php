@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Home')
-@endsection
+@stop 
 @section('main')
 
 
@@ -50,4 +50,4 @@
 </div>
 </div>
           
-@endsection
+@stop 

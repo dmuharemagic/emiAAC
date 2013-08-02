@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'News archive')
-@endsection
+@stop 
 @section('main')
 
 {{-- in progress --}}
@@ -10,4 +10,4 @@
 </div>
 
 
-@endsection
+@stop 

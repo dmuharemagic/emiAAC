@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Recover your password')
-@endsection
+@stop 
 @section('main')
 
 {{-- in progress --}}
@@ -9,4 +9,4 @@
 {{ 'recovery/password' }}
 </div>
 
-@endsection
+@stop 

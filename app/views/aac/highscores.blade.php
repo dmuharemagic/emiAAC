@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Highscores')
-@endsection
+@stop 
 @section('main')
 <!-- This is not done yet. -->
 <div class="doc-content-box">
@@ -54,4 +54,4 @@
 </div>
 </div>
 
-@endsection
+@stop 

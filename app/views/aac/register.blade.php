@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Register')
-@endsection
+@stop 
 @section('main')
 
 <div class="separator">
@@ -95,4 +95,4 @@
 {{ Form::close() }}
 </div>
 
-@endsection
+@stop 

@@ -8,7 +8,7 @@ class Player extends Eloquent {
     protected $fillable = array('char_name', 'sex');
     public $timestamps = true;
 
-     public function user() {
+    public function user() {
         return $this->belongsTo('User');
     }
 }

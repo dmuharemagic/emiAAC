@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Create character')
-@endsection
+@stop 
 @section('main')
 
 <div class="doc-content-box">
@@ -49,4 +49,4 @@
 	{{ Form::close() }}
 </div>
 
-@endsection
+@stop 

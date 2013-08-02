@@ -1,10 +1,11 @@
 @extends('base')
 @section('title', 'Who is online?')
-@endsection
+@stop 
 @section('main')
 
 <div class="doc-content-box">
       @if($results->count() > 0)
+      <legend>Who is online?</legend>
   <table class="table table-striped table-condensed">
     <thead>
       <tr>
@@ -71,4 +72,4 @@
 </div>
 </div>
 
-@endsection
+@stop 

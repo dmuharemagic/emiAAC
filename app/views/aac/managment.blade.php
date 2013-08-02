@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Account Managment')
-@endsection
+@stop 
 @section('main')
 
 <div class="doc-content-box">
@@ -68,4 +68,4 @@
 </div>
 </div>
 
-@endsection
+@stop 
