@@ -24,4 +24,9 @@ class SubController extends BaseController {
         $players = Player::orderBy('experience','desc')->get();
         return View::make('aac.highscores')->with('players', $players);
     }
+
+    public function recover_password()
+    {
+        return View::make('aac.password_recover');
+    }
 }

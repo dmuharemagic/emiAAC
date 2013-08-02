@@ -102,7 +102,7 @@
                         <li style="padding-left: 0">
                           <ul class="nav" style="padding-left: 0">
                             <li>
-                              <a href="index">
+                              <a href="{{ URL::to('news/index') }}">
                                 <i class="icon-home icon-black">
                                 </i>
                                 Home
@@ -118,48 +118,53 @@
                               </a>
                               <ul class="dropdown-menu">
                                 <li class="disabled">
-                                  <a href="forum">
+                                  <a href="#">
                                     Forum
                                   </a>
                                 </li>
-                                <li>
-                                  <a href="casts">
+                                <li class="disabled">
+                                  <a href="#">
                                     Live Casts
                                   </a>
                                 </li>
-                                <li>
-                                  <a href="character">
+                                 <li>
+                              <a href="{{ URL::to('community/online') }}">
+                                Online list
+                              </a>
+                            </li>
+                                <li class="disabled">
+                                  <a href="#">
                                     Characters
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="highscores">
+                                  <a href="{{ URL::to('community/highscores') }}">
                                     Highscores
                                   </a>
                                 </li>
-                                <li>
-                                  <a href="support">
+                                <li class="disabled">
+                                  <a href="#">
                                     Support
                                   </a>
                                 </li>
                                 <li class="disabled">
-                                  <a href="houses">
+                                  <a href="#">
                                     Houses
                                   </a>
                                 </li>
                                 <li class="disabled">
-                                  <a href="gallery">
+                                  <a href="#">
                                   </i>
                                   Gallery
                                 </a>
                             </li>
                             <li class="disabled">
-                              <a href="guilds">
+                              <a href="#">
                                 Guilds
                               </a>
                             </li>
                             <li class="disabled">
-                              <a href="guildwars">
+                              <a href="#">
                                 Guild Wars
                               </a>
                             </li>
@@ -174,35 +179,35 @@
                             </b>
                           </a>
                           <ul class="dropdown-menu">
-                            <li>
-                              <a href="rules">
+                            <li class="disabled">
+                              <a href="#">
                                 Rules
                               </a>
                             </li>
-                            <li>
-                              <a href="expstages">
+                            <li class="disabled">
+                              <a href="#">
                                 Exp. stages
                               </a>
                             </li>
                             <li class="disabled">
-                              <a href="monsters">
+                              <a href="#">
                                 Monsters
                               </a>
                             </li>
-                            <li>
-                              <a href="quests">
+                            <li class="disabled">
+                              <a href="#">
                                 Quests
                               </a>
                             </li>
                             <li class="disabled">
-                              <a href="spells">
+                              <a href="#">
                                 Spells
                               </a>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <a href="shop">
+                          <a href="#">
                             <i class="icon-gift icon-black">
                             </i>
                             Shop
@@ -216,7 +221,7 @@
                     <li style="float: right;padding-right: 0">
                       <ul class="nav">
                         <li>
-                          <a href="register">
+                          <a href="{{ URL::to('register') }}">
                             <i class="icon-black icon-plus">
                             </i>
                             
@@ -226,7 +231,7 @@
                           </a>
                         </li>
                         <li>
-                          <a href="login">
+                          <a href="{{ URL::to('login') }}">
                             <i class="icon-black icon-lock">
                             </i>
                             
@@ -259,7 +264,7 @@
                       <ul class="dropdown-menu">
                         <li>
                           
-                          <a href="managment">
+                          <a href="{{ URL::to('account/managment') }}">
                             <i class="icon-user">
                             </i>
                             Account Managment  
@@ -268,7 +273,7 @@
                         </li>
                         <li>
                           
-                          <a href="change_password">
+                          <a href="{{ URL::to('account/managment/change_credentials') }}">
                             <i class="icon-lock">
                             </i>
                             Change Password
@@ -279,7 +284,7 @@
                         </li>
                         <li>
                           
-                          <a href="logout">
+                          <a href="{{ URL::to('account/logout') }}">
                             <i class="icon-off">
                             </i>
                             Log out
@@ -320,6 +325,16 @@
 
       <div class="alert alert-success alert-block">
         <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Proceed.</strong>
+        <div id="spaceholder">&nbsp;</div>
+        {{{ $message }}}
+      </div>
+
+      @endif    
+
+            @if ($message = Session::get('danger'))
+
+      <div class="alert alert-success alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Failure!</strong>
         <div id="spaceholder">&nbsp;</div>
         {{{ $message }}}
       </div>

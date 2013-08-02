@@ -47,14 +47,12 @@
         {{ Form::password('password') }}
       </div>
     </div>
-    <a href="#" class="btn btn-link">
+    <a href="{{ URL::to('recovery/password') }}" class="btn btn-link">
       Have you forgotten your password?
     </a>
     <div class="form-actions">
-      {{ Form::submit('Sign in', array('class' =>
-      'btn btn-success')) }}
-      {{ Form::button('Help', array('class' =>
-      'btn btn-default')) }}
+      {{ Form::submit('Sign in', array('class' => 'btn btn-success')) }}
+      {{ Form::button('Help', array('class' => 'btn btn-default')) }}
     </div>
     {{ Form::close() }}
   </div>

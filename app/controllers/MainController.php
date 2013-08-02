@@ -6,4 +6,9 @@ class MainController extends BaseController {
         return View::make('aac.index');
     }
 
+    public function archive_index()
+    {
+    	return View::make('aac.news_archive');
+    }
+
 }

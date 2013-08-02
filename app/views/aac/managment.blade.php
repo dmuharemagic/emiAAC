@@ -7,8 +7,8 @@
 
 <legend>Account Managment</legend>
 
-<a href="create_character" class="btn btn-success"><i class="icon-plus icon-white"></i> Create a new character</a>&nbsp;
-<a href="#" class="btn btn-info"><i class="icon-cogs icon-white"></i> Change your credentials</a>
+<a href="managment/create_character" class="btn btn-success"><i class="icon-plus icon-white"></i> Create a new character</a>&nbsp;
+<a href="managment/change_credentials" class="btn btn-info"><i class="icon-cogs icon-white"></i> Change your credentials</a>
 
 <div id="spaceholder">&nbsp;</div>
 

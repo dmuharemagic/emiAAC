@@ -19,7 +19,7 @@ class AuthController extends BaseController {
         if (Auth::check())
         {
 
-            return Redirect::to('index')->with('success', 'You are already logged in!');
+            return Redirect::to('news/index')->with('danger', 'You are already logged in!');
         }
 
         return View::make('aac.login');
@@ -42,8 +42,8 @@ class AuthController extends BaseController {
 
         
         $rules = array(
-            'name'  => 'required|min:4',
-            'password'  => 'required|min:4'
+            'name'  => 'required|min:4|max:32',
+            'password'  => 'required|min:4|max:255'
         );
 
 
@@ -56,7 +56,7 @@ class AuthController extends BaseController {
             if (Auth::attempt($userdata))
             {
 
-                return Redirect::to('index')->with('success', 'You have successfully logged in!');
+                return Redirect::to('news/index')->with('success', 'You have successfully logged in!');
             }
             else
             {
@@ -140,7 +140,7 @@ class AuthController extends BaseController {
         $input = Input::all();
 
         $rules = array(
-          'character_name' => 'required|unique:players,name|min:4',
+          'character_name' => 'required|unique:players,name|min:4|max:255',
           'sex' => 'required',
           'vocation' => 'required'
           );
@@ -149,7 +149,7 @@ class AuthController extends BaseController {
 
         if ($validation->fails()) {
 
-          return Redirect::to('create_character')->withErrors($validation);
+          return Redirect::to('account/managment/create_character')->withErrors($validation);
           
         } else {
 
@@ -180,7 +180,7 @@ class AuthController extends BaseController {
 }
              $player->save();
 
-          return Redirect::to('managment')->with('success', 'Your character has been created.');
+          return Redirect::to('account/managment')->with('success', 'Your character has been created.');
         }
     }
 
@@ -193,5 +193,12 @@ class AuthController extends BaseController {
        $player->delete();
 
        return Redirect::back()->with('success', 'Your character has been deleted.');
+    }
+
+    // change_credentials
+
+    public function change_credentials()
+    {
+      return View::make('aac.change_credentials');
     }
 }

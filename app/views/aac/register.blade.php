@@ -84,7 +84,7 @@
 </div>
 
 
-<a href="#" class="btn btn-link">
+<a href="{{ URL::to('login') }}" class="btn btn-link">
   Already have an account?
 </a>
 <div class="form-actions">

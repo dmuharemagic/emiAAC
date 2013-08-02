@@ -4,6 +4,7 @@
 @section('main')
 
 <div class="doc-content-box">
+      @if($results->count() > 0)
   <table class="table table-striped table-condensed">
     <thead>
       <tr>
@@ -17,7 +18,6 @@
   </thead>
 <tbody>
 
-    @if($results->count() > 0)
         <?php $count = 0;?>
         @foreach($results as $result) 
       <?php $count++;?>
@@ -60,14 +60,14 @@
 
       </tr>
       @endforeach 
-@else
-
-<td>{{ "There are no users online." }}</td>
-
-@endif
 </tbody>
 
   </table>
+  @else
+
+{{ "There are no players online." }}
+
+@endif
 </div>
 </div>
 

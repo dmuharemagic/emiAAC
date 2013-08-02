@@ -24,12 +24,6 @@
     </p>
     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    <div class="btn-group">
-    <a class="btn btn-success" href="#"><i class="icon-trash icon-large"></i> Edit</a>
-    
-    <a class="btn btn-danger" href="#"><i class="icon-trash icon-large"></i> Delete</a>
-  </div>
     
   </div>
 </div>
@@ -52,12 +46,6 @@
   <p>Ut tempor, orci at lobortis imperdiet, sem sem faucibus eros, eu facilisis arcu erat vel risus. Donec vestibulum metus eu purus congue ullamcorper eget non urna. </p>
   <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Proin nisl diam, consequat vitae gravida in, varius sed sem. Vivamus adipiscing diam aliquam justo rutrum tristique.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  
-  <div class="btn-group">
-  <a class="btn btn-success" href="#"><i class="icon-trash icon-large"></i> Edit</a>
-  
-  <a class="btn btn-danger" href="#"><i class="icon-trash icon-large"></i> Delete</a>
-  </div>
   
 </div>
 </div>

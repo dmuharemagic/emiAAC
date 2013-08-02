@@ -5,7 +5,7 @@
 
 <div class="doc-content-box">
 	<legend>Create a character</legend>
-	{{ Form::open(array('url' => 'create_character')) }}
+	{{ Form::open(array('url' => 'account/managment/create_character')) }}
 
 @if ($errors-> has('character_name'))
 <div class="alert alert-danger">
