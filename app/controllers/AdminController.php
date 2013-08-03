@@ -29,12 +29,29 @@ class AdminController extends BaseController {
 
 	public function post_create_news()
 	{
-		News::create(array(
-                 'title' => Input::get('title'),
-                 'content' => Input::get('content')
-			));
+        $input = Input::all();
+
+        $rules = array(
+                'title' => 'required|unique:aac_news,title|min:4|max:255',
+                'content' => 'required|unique:aac_news,content|min:10'
+                );
+
+        $validation = Validator::make($input, $rules);
+
+      if ($validation->fails()) {
+
+         return Redirect::back()->withErrors($validation);
+
+      } else {
+
+        $news = new News;
+        $news->title = $input['title'];
+        $news->content = $input['content'];
+        $news->save();
+
 
 		return Redirect::to('news/index');
+        }
 	}
 
     public function news_delete($newsId)
@@ -80,6 +97,60 @@ class AdminController extends BaseController {
                         ->with('roles', $roles)
                         ->with('players', $players);
              } else {
+
+               return Redirect::to('news/index')->with('danger', 'You either have insufficient permissions to access this page or your user credentials are not refreshed.');
+                    }
+             }
+         }
+
+         public function ban_players()
+         {
+            // in progress
+            if (Auth::check()) {
+
+            $roles = Auth::user()->type;
+            $players = Player::all();
+
+            if ($roles == '5')
+             {
+            return View::make('admin.ban');
+            } else {
+
+               return Redirect::to('news/index')->with('danger', 'You either have insufficient permissions to access this page or your user credentials are not refreshed.');
+                    }
+             }
+         }
+
+         public function violations()
+         {
+            // in progress
+            if (Auth::check()) {
+
+            $roles = Auth::user()->type;
+            $players = Player::all();
+
+            if ($roles == '5')
+             {
+            return View::make('admin.violations');
+            } else {
+
+               return Redirect::to('news/index')->with('danger', 'You either have insufficient permissions to access this page or your user credentials are not refreshed.');
+                    }
+             }
+         }
+
+         public function namelock_players()
+         {
+                        // in progress
+            if (Auth::check()) {
+
+            $roles = Auth::user()->type;
+            $players = Player::all();
+
+            if ($roles == '5')
+             {
+            return View::make('admin.namelock');
+            } else {
 
                return Redirect::to('news/index')->with('danger', 'You either have insufficient permissions to access this page or your user credentials are not refreshed.');
                     }

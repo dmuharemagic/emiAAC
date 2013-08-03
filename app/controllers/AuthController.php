@@ -78,6 +78,11 @@ class AuthController extends BaseController {
 
     public function get_register()
     {
+        if (Auth::check())
+        {
+
+            return Redirect::to('news/index')->with('danger', 'You need to log out before you can register a new account.');
+        }
        return View::make('aac.register');
     }
 
@@ -97,7 +102,6 @@ class AuthController extends BaseController {
             	);
 
       $validation = Validator::make($input, $rules);
-
 
       if ($validation->fails()) {
 
@@ -140,7 +144,7 @@ class AuthController extends BaseController {
         $input = Input::all();
 
         $rules = array(
-            'character_name' => 'required|unique:players,name|min:4|max:255|alpha|naughtywords',
+            'character_name' => 'required|unique:players,name|min:4|max:255|alpha',
             'sex' => 'required',
             'vocation' => 'required'
         );

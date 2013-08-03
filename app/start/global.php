@@ -86,8 +86,14 @@ require app_path().'/filters.php';
 
 // View composer
 
-View::composer(array('common.roles','common.base_errors'), function($view)
+View::composer(array('common.roles','common.menu_addition'), function($view)
 {
+	 if (Auth::check()) {
+
+    $roles = Auth::user()->type;
 	$roles = Auth::user()->type;
     $view->with('roles', $roles);
+} else {
+	return Redirect::to('news/index');
+}
 });

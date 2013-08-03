@@ -7,6 +7,20 @@
 <div class="doc-content-box">
 	<legend>Create news</legend>
 
+@if ($errors-> has('title'))
+<div class="alert alert-danger">
+  {{ $errors->
+  first('title', ':message') }}
+</div>
+@endif
+
+@if ($errors-> has('content'))
+<div class="alert alert-danger">
+  {{ $errors->
+  first('content', ':message') }}
+</div>
+@endif
+
     {{ Form::open(array('url' => 'admin/dash/news/add')) }}
 
      <div class="control-group">

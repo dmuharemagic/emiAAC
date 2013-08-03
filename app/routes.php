@@ -55,7 +55,9 @@ Route::post('admin/dash/news/add', 'AdminController@post_create_news');
 Route::get('admin/dash/news/delete/{id}', 'AdminController@news_delete');
 
 Route::get('admin/dash/players', 'AdminController@admin_players');
-
+Route::get('admin/dash/violations', 'AdminController@violations');
+Route::get('admin/dash/violations/ban', 'AdminController@ban_players');
+Route::get('admin/dash/violations/namelock', 'AdminController@namelock_players');
 
 
 
