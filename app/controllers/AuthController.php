@@ -139,28 +139,13 @@ class AuthController extends BaseController {
     {
         $input = Input::all();
 
-  Validator::extend('naughtywords', function($attribute, $value, $parameters)
-  {
-            // Swear lots here
-      $words = array('ass', 'fuck', 'shit');
-            foreach ($words as $word)
-            {
-                 if (strpos($str, $word) !== false) return false;
-            }
-      return true;
-  });
-
         $rules = array(
             'character_name' => 'required|unique:players,name|min:4|max:255|alpha|naughtywords',
             'sex' => 'required',
             'vocation' => 'required'
         );
 
-  $messages = array(
-      'naughtywords' => 'The :attribute must not contain naughty words',
-  );
-
-        $validation = Validator::make($input, $rules, $messages);
+        $validation = Validator::make($input, $rules);
 
         if ($validation->fails()) {
 
