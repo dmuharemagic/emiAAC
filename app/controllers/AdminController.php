@@ -2,6 +2,7 @@
 
 class AdminController extends BaseController {
 
+// news
     public function get_news()
     {
     	if (Auth::check()) {
@@ -45,6 +46,7 @@ class AdminController extends BaseController {
        return Redirect::back()->with('success', 'Your news post has been deleted.');
     }
 
+//dash
     	public function get_dash() {
 
     		if (Auth::check()) {
@@ -57,6 +59,29 @@ class AdminController extends BaseController {
              } else {
 
 	           return Redirect::to('news/index')->with('danger', 'You either have insufficient permissions to access this page or your user credentials are not refreshed.');
+                    }
+             }
+         }
+
+
+         //players
+
+         public function admin_players()
+         {
+
+            if (Auth::check()) {
+
+            $roles = Auth::user()->type;
+            $players = Player::all();
+
+            if ($roles == '5')
+             {
+               return View::make('admin.players')
+                        ->with('roles', $roles)
+                        ->with('players', $players);
+             } else {
+
+               return Redirect::to('news/index')->with('danger', 'You either have insufficient permissions to access this page or your user credentials are not refreshed.');
                     }
              }
          }

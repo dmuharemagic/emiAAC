@@ -42,13 +42,19 @@ Route::get('recovery/password', 'SubController@recover_password');
 // Test
 
 Route::get('test', 'SkillController@index');
+
+
+
+
+// AdminController
+
 Route::get('admin/dash', 'AdminController@get_dash');
 Route::get('admin/dash/news', 'AdminController@get_news');
 Route::get('admin/dash/news/add', 'AdminController@create_news');
 Route::post('admin/dash/news/add', 'AdminController@post_create_news');
 Route::get('admin/dash/news/delete/{id}', 'AdminController@news_delete');
 
-
+Route::get('admin/dash/players', 'AdminController@admin_players');
 
 
 
