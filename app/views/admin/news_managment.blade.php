@@ -32,7 +32,7 @@
 <td>{{ $news->content }}</td> 
 <td>{{ $news->created_at }}</td>
 <td>{{ $news->updated_at }}</td>
-<td><a class="btn btn-mini btn-danger" href="{{ URL::action('AdminController@news_delete', ['id' => $news->id]) }}"><i class="icon-trash icon-white"></i> Delete</a></td>
+<td><a class="btn btn-mini btn-danger" href="{{ URL::action('NewsController@delete', ['id' => $news->id]) }}"><i class="icon-trash icon-white"></i> Delete</a></td>
 </tr> 
 @endforeach
 </tbody> 

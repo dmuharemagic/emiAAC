@@ -236,45 +236,9 @@
     
     <div class="page-header">      
       
-      @if ($message = Session::get('success'))
-
-      <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong>
-        <div id="spaceholder">&nbsp;</div>
-        {{{ $message }}}
-      </div>
-
-      @endif
+     @include('common.base_errors')
       
-      @if ($message = Session::get('succ'))
 
-      <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Proceed.</strong>
-        <div id="spaceholder">&nbsp;</div>
-        {{{ $message }}}
-      </div>
-
-      @endif    
-
-            @if ($message = Session::get('danger'))
-
-      <div class="alert alert-success alert-danger">
-        <button type="button" class="close" data-dismiss="alert">&times;</button><strong>Failure!</strong>
-        <div id="spaceholder">&nbsp;</div>
-        {{{ $message }}}
-      </div>
-
-      @endif          
-      
-      <div class="alert alert-info"><span class="label label-info">12 Jul 2013 03:59</span>
-        <span class="label label-success">Update</span>
-        
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <td>Patch <strong>1.67b</strong> has been released. More information <a href="#"><strong>here.</strong></a></td>
-      </div>
-      
-    </div>
-    
     @yield('main')
     
     <div id="spaceholder">&nbsp;</div>

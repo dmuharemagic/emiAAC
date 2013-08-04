@@ -189,7 +189,7 @@ class AuthController extends BaseController {
        $player = Player::findOrFail($playerId);
        $player->delete();
 
-       return Redirect::back()->with('success', 'Your character has been deleted.');
+       return Redirect::back()->with('success', 'Your have deleted the character successfully.');
     }
 
     // change_credentials

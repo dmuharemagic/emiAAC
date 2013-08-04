@@ -80,13 +80,24 @@ Route::get('test', 'SkillController@index');
 Route::group(array('before' => 'admin'), function()
 {  
 
+    # Admin Dashboard
 	Route::get('admin/dash', 'AdminController@get_dash');
-	Route::get('admin/dash/news', 'AdminController@get_news');
-	Route::get('admin/dash/news/add', 'AdminController@create_news');
-	Route::post('admin/dash/news/add', 'AdminController@post_create_news');
-	Route::get('admin/dash/news/delete/{id}', 'AdminController@news_delete');
 
+    # News Management
+	Route::get('admin/dash/news', 'NewsController@index');
+	Route::get('admin/dash/news/add', 'NewsController@create');
+	Route::post('admin/dash/news/add', 'NewsController@store');
+	Route::get('admin/dash/news/{id}/delete/', 'NewsController@delete')
+	        ->where('id', '[0-9]+');
+
+	# News ticker
+	Route::get('admin/dash/newsticker', 'NewsController@newsticker_index');
+
+
+    # Player management
 	Route::get('admin/dash/players', 'AdminController@admin_players');
+
+	# Violations
 	Route::get('admin/dash/violations', 'AdminController@violations');
 	Route::get('admin/dash/violations/ban', 'AdminController@ban_players');
 	Route::get('admin/dash/violations/namelock', 'AdminController@namelock_players');

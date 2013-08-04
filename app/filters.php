@@ -79,16 +79,22 @@ Route::filter('csrf', function()
 	}
 });
 
+/*
+|--------------------------------------------------------------------------
+| Admin Filter
+|--------------------------------------------------------------------------
+*/
+
 Route::filter('admin', function()
 {
 	if (Auth::check()) {
     		$roles = Auth::user()->role;
 
             if ($roles == '5') {
-    	return Redirect::to('news')
+    	return Redirect::to('news/index')
     	    ->with('roles', $roles);
     } 
   } else {
-  	return Redirect::to('news/index')->with('danger', 'You either have insufficient permissions to access this page or your user credentials are not refreshed.');
+  	return View::make('errors.401');
   }
 });
