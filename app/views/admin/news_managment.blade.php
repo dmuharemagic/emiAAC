@@ -13,6 +13,7 @@
 <thead>
 	<tr>
 		<th>ID</th>
+		<th>Author</th>
 		<th>Title</th>
 		<th>Content</th>
 		<th>Created at</th>
@@ -25,7 +26,8 @@
 @foreach($newss as $news)
 
 <tr> 
-<td>{{ $news->id }} </td> 
+<td>{{ $news->id }}</td>
+<td>{{ $news->author }}</td>
 <td>{{ $news->title }}</td> 
 <td>{{ $news->content }}</td> 
 <td>{{ $news->created_at }}</td>

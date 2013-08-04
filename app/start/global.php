@@ -53,6 +53,21 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
+App::error(function(NotAllowedHttpException $exception)
+{
+  return Response::make(
+      View::make('errors/401')
+  , 401);
+});
+
+App::missing(function($exception)
+{
+  return Response::make(
+      View::make('errors/404')
+  , 404);
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler
@@ -86,14 +101,7 @@ require app_path().'/filters.php';
 
 // View composer
 
-View::composer(array('common.roles','common.menu_addition'), function($view)
+View::composer(array('common.menu_addition'), function($view)
 {
-	 if (Auth::check()) {
-
-    $roles = Auth::user()->type;
-	$roles = Auth::user()->type;
-    $view->with('roles', $roles);
-} else {
-	return Redirect::to('news/index');
-}
+	$view;
 });

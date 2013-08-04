@@ -12,7 +12,7 @@
       <legend>{{ $news->title }} <div id="spaceholder"></div>
         
         <p>
-          <h6><i class="icon-calendar"></i> {{ $news->created_at }} 
+          <h6><i class="icon-calendar"></i> {{ $news->created_at }} &nbsp;&nbsp;&nbsp;&nbsp;<a href="/profile/{{ $news->author }}">{{ $news->author }}</a>
         </p>
       </h6>
       </legend>

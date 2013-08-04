@@ -13,6 +13,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $table = 'accounts';
 
 
+    public static $rules = array(
+            'name'  => 'required|min:4|max:32',
+            'password'  => 'required|min:4|max:255'
+        );
+
+
 	/**
 	*
 	*
@@ -61,5 +67,4 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 public function players() {
         return $this->hasMany('Player','account_id');
     }
-
 }

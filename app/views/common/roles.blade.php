@@ -5,7 +5,7 @@
                       <ul class="nav">
                         <li>
                           <a href="{{ URL::to('admin/dash') }}">
-                            <i class="icon-key">
+                            <i class="icon-adn">
                             </i>
                             
                             <strong>

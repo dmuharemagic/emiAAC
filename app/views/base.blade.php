@@ -286,7 +286,7 @@
       <div class="container">
         <div class="footer-post">
           <p>Designed and built by <a href='http://otland.net/members/zysen/'><strong>Zysen</a></strong> | Built with <a href="http://laravel.com" target="_blank" title="Laravel 4 - PHP Framework">Laravel 4<alt="Laravel 4 - PHP Framework"></a></p>
-            <p><div class="center-1"><a href="#">Back to top &uarr;</a></div></p>
+            <p><div class="center-1"><a href="#">Back to top <i class="icon-level-up"></i></a></div></p>
         <p><small><?php
 $time_start = microtime(true);
 

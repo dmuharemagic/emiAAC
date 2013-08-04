@@ -7,6 +7,13 @@
 <div class="doc-content-box">
 	<legend>Create news</legend>
 
+  @if ($errors-> has('author'))
+<div class="alert alert-danger">
+  {{ $errors->
+  first('author', ':message') }}
+</div>
+@endif
+
 @if ($errors-> has('title'))
 <div class="alert alert-danger">
   {{ $errors->
@@ -21,7 +28,16 @@
 </div>
 @endif
 
+
     {{ Form::open(array('url' => 'admin/dash/news/add')) }}
+
+
+     <div class="control-group">
+  {{ Form::label('author', 'Author:') }}
+  <div class="controls">
+    {{ Form::text('author', null, array('placeholder' => 'Author name goes here..')) }}
+  </div>
+</div>
 
      <div class="control-group">
   {{ Form::label('title', 'Title:') }}

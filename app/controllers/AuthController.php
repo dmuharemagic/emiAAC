@@ -40,16 +40,9 @@ class AuthController extends BaseController {
             'password' => Input::get('password')
         );
 
-        
-        $rules = array(
-            'name'  => 'required|min:4|max:32',
-            'password'  => 'required|min:4|max:255'
-        );
-
-
 
            // Validate
-        $validator = Validator::make($userdata, $rules);
+        $validator = Validator::make($userdata, User::$rules);
         if ($validator->passes())
         {
 

@@ -4,7 +4,6 @@ class News extends Eloquent {
 
     protected $table = 'aac_news';
 
-    protected $fillable = array('title', 'content');
+    protected $fillable = array('author', 'title', 'content');
     public $timestamps = true;
-
 }

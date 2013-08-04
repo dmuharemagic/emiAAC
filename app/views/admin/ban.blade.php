@@ -24,7 +24,7 @@
         <div class="control-group">
   {{ Form::label('comment', 'Comment:') }}
   <div class="controls">
-    {{ Form::textarea('comment', null, array('placeholder' => 'Comment goes here..')) }}
+    {{ Form::textarea('comment', null, array('class' => 'span9', 'rows' => '10', 'placeholder' => 'Comment goes here..')) }}
   </div>
 </div>
 

@@ -2,13 +2,27 @@
 
 Profiler::disable();
 
-// MainController
+/** ------------------------------------------
+ *  Route model binding
+ *  ------------------------------------------
+ */
+Route::model('user', 'User');
+Route::model('player', 'Player');
+Route::model('role', 'Role');
+
+/** ------------------------------------------
+ *  MainController
+ *  ------------------------------------------
+ */
 
 Route::get('/', 'MainController@get_index');
 Route::get('news/index', 'MainController@get_index');
 Route::get('news/archive', 'MainController@archive_index');
 
-// AuthController
+/** ------------------------------------------
+ *  Authentication Routes
+ *  ------------------------------------------
+ */
 
 Route::get('register', 'AuthController@get_register');
 Route::post('register', 'AuthController@post_register');
@@ -17,6 +31,10 @@ Route::post('login', 'AuthController@post_login');
 Route::get('account/logout', 'AuthController@get_logout');
 
 
+/** ------------------------------------------
+ *  Frontend Routes
+ *  ------------------------------------------
+ */
 
 Route::group(array('before' => 'auth'), function()
 {
@@ -29,35 +47,54 @@ Route::group(array('before' => 'auth'), function()
 
 });
 
-// SubController
+/** ------------------------------------------
+ *  Sub Routes
+ *  ------------------------------------------
+ */
 
 Route::get('community/online', 'SubController@get_online');
 Route::get('community/highscores', 'SubController@highscores');
 Route::get('recovery/password', 'SubController@recover_password');
 
-// CharactersController
-// in progress
+/** ------------------------------------------
+ *  Character Routes
+ *   // in progress
+ *  ------------------------------------------
+ */
 
 
-// Test
+/** ------------------------------------------
+ *  Test Routes
+ *  ------------------------------------------
+ */
 
 Route::get('test', 'SkillController@index');
 
 
 
+/** ------------------------------------------
+ *  Admin Routes
+ *  ------------------------------------------
+ */
 
-// AdminController
+Route::group(array('before' => 'admin'), function()
+{  
 
-Route::get('admin/dash', 'AdminController@get_dash');
-Route::get('admin/dash/news', 'AdminController@get_news');
-Route::get('admin/dash/news/add', 'AdminController@create_news');
-Route::post('admin/dash/news/add', 'AdminController@post_create_news');
-Route::get('admin/dash/news/delete/{id}', 'AdminController@news_delete');
+	Route::get('admin/dash', 'AdminController@get_dash');
+	Route::get('admin/dash/news', 'AdminController@get_news');
+	Route::get('admin/dash/news/add', 'AdminController@create_news');
+	Route::post('admin/dash/news/add', 'AdminController@post_create_news');
+	Route::get('admin/dash/news/delete/{id}', 'AdminController@news_delete');
 
-Route::get('admin/dash/players', 'AdminController@admin_players');
-Route::get('admin/dash/violations', 'AdminController@violations');
-Route::get('admin/dash/violations/ban', 'AdminController@ban_players');
-Route::get('admin/dash/violations/namelock', 'AdminController@namelock_players');
+	Route::get('admin/dash/players', 'AdminController@admin_players');
+	Route::get('admin/dash/violations', 'AdminController@violations');
+	Route::get('admin/dash/violations/ban', 'AdminController@ban_players');
+	Route::get('admin/dash/violations/namelock', 'AdminController@namelock_players');
+	
+});
+
+
+
 
 
 
