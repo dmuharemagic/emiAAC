@@ -3,14 +3,23 @@
 
 Automatic Account Creator (built with Laravel 4 and Bootstrap)
 ### -beta release will be released shortly-
+## -there are many bugs, I fix them daily-
 
 ## Features
 
 <b>emiAAC</b> is currently in development phase.
 Current features (updated daily):
 
-* Account/user creation system
-* Account/user management system
+* Account creation and management system
+* Player creation and management
+* News creation andmanagement system
+* News ticker system
+* Admin dashboard
+* Administrating players
+* Highscore system
+* Online player list
+* Custom errors HTTP errors layouts (401, 403, 404, 500)
+* Forum system [in progress]
 
 
 ## Downloads
