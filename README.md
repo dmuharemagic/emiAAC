@@ -3,7 +3,7 @@
 
 Automatic Account Creator (built with Laravel 4 and Bootstrap)
 ### -beta release will be released shortly-
-#### -there are many bugs, I fix them daily-
+####### -there are many bugs, I fix them daily-
 
 ## Features
 
